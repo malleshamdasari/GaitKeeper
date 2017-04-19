@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/.android/build-cache/451508fb93555b12cf6e0217fa68447bfe7da4cc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8208bc0746a49c8fb5a5c076ca8beb3edda5bd92/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/.android/build-cache/4ed0b2623174afe45d1dc151aaf4c1e947dd3355/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_379685391788d709dc16e42a07d3ded9f6b65665/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7f1fb1284c50be79b65cb4e20560df9a97898b67">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_26aa01b32935a71f7a17dbb207876e99fc2e7785/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/.android/build-cache/2e356010f009d76bd82aaa94f5d85c19e48cb015/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c1d957e84bf628536d00c50d7a19f303e729e625/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/.android/build-cache/814b3228b11f0c7815c98f7ed33f6e1fe151568f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0885746842220818afbf63d4d8611ad5791faa1e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0532652fda63c1fe9d46585d4e1ff400fd70a1dd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/.android/build-cache/6c85860baca500a6db13517bfd510ed3f6727ab1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_85ea9e332313410fb156ddd5707501b819e4caf3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/.android/build-cache/93e910a170ddd0fdf1f2853203876e35be5a460d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eaecdfba6a5c1edbdf16cef1fc1cae13781730be/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_0eaea79b10c2ccd02967dca7a19979b9887bae62/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/.android/build-cache/dbcd2b37407679a685c3691aff20c9ac9ce87406/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2a27aa4cdd7a03709210d7c810314e72f572e072/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_c6c032245aaf636818bf3468b8828b6ae824f188/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/.android/build-cache/12e2cb954d53981f0632d578010083ca2daf0834/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7ec99383fbd7fb5718d68f481ec09370a74eea2f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/.android/build-cache/a860a3cbbd9e3d47b7fa3949e53640f8137b694b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ddc8ab09817744cdeff003f370697b77fde95d09/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mallesh/.android/build-cache/1c1cb37727433441ad6f77b61dece855a49d6844/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/home/mallesh/Desktop/sensor/sensor_record/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_69fa03c67a2e06080cb4f4c2cc9e7e75612fe8e5/classes.dex" />
+    </item>
+
+</items>
