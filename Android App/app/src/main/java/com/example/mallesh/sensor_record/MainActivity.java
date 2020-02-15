@@ -29,6 +29,11 @@ import java.util.TimerTask;
 import javax.net.ssl.*;
 
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+import okhttp3.MediaType;
+import org.json.JSONObject;
 
 public class MainActivity extends ListActivity implements SensorEventListener {
     //global variables
@@ -47,6 +52,8 @@ public class MainActivity extends ListActivity implements SensorEventListener {
     private static String INFLUX_DATABASE = "db_team_69";
     private static String INFLUX_USER = "user_team_69";
     private static String INFLUX_PASS = "J9sdscUlGImEzBEP";
+
+    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
     /**
      * Called when the activity is first created.
@@ -80,54 +87,54 @@ public class MainActivity extends ListActivity implements SensorEventListener {
 
         /// [Options Example]
         PayfoneOptions payfoneOptions = new PayfoneOptions() {
-        /*
-            The required override: You need to provide the Payfone SDK with
-            the Activity that will be active while the authentication is taking
-            place.
-         */
-        @Override
-        public MainActivity getActivity() {
-            return MainActivity.this;
-        }
+            /*
+                The required override: You need to provide the Payfone SDK with
+                the Activity that will be active while the authentication is taking
+                place.
+             */
+            @Override
+            public MainActivity getActivity() {
+                return MainActivity.this;
+            }
 
-        /*
-            Optional override.
+            /*
+                Optional override.
 
-            If you want to handle specific failure modes in a custom manner,
-            this is the place to add such code. Otherwise you can leave the
-            default handler in place.
-         */
-        @Override
-        public void handleFailure(final PayfoneOptions.FailureMode failureMode, String message) {
-            AlertDialog.Builder alert = new
-                    AlertDialog.Builder(MainActivity.this);
-            alert.setTitle("Authentication Failed");
-            alert.setMessage(message);
-            alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int whichButton) {
-                    if (failureMode == FailureMode.WIFI_CALLING_ENABLED) {
-                        startActivity(new
-                                Intent(Settings.ACTION_WIFI_SETTINGS));
-                    } // else do nothing
-                }
-            });
+                If you want to handle specific failure modes in a custom manner,
+                this is the place to add such code. Otherwise you can leave the
+                default handler in place.
+             */
+            @Override
+            public void handleFailure(final PayfoneOptions.FailureMode failureMode, String message) {
+                AlertDialog.Builder alert = new
+                        AlertDialog.Builder(MainActivity.this);
+                alert.setTitle("Authentication Failed");
+                alert.setMessage(message);
+                alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        if (failureMode == FailureMode.WIFI_CALLING_ENABLED) {
+                            startActivity(new
+                                    Intent(Settings.ACTION_WIFI_SETTINGS));
+                        } // else do nothing
+                    }
+                });
 
-            alert.show();
-            System.out.println(message);
-        }
+                alert.show();
+                System.out.println(message);
+            }
 
-        /*
-            An optional override that you can supply that will notify you when
-            the device cellular IP is available. It will call your code in the
-            UI thread, so it's safe to use the result to set a UI field, as in
-            the example below.
+            /*
+                An optional override that you can supply that will notify you when
+                the device cellular IP is available. It will call your code in the
+                UI thread, so it's safe to use the result to set a UI field, as in
+                the example below.
 
-            It's safe to delete this override if you don't need it.
-         */
-        @Override
-        public void identifiedCellularIP(final String deviceCellularIP) {
-            System.out.println("Found IP Address:" + deviceCellularIP);
-        }
+                It's safe to delete this override if you don't need it.
+             */
+            @Override
+            public void identifiedCellularIP(final String deviceCellularIP) {
+                System.out.println("Found IP Address:" + deviceCellularIP);
+            }
         };
         payfoneOptions.mDebugMode = 1;
         // Create the PayfoneSDK using the options set above.
@@ -138,24 +145,48 @@ public class MainActivity extends ListActivity implements SensorEventListener {
             @Override
             public void run() {
 
-                    System.out.println("Payphone stuff");
+                System.out.println("Payphone stuff");
                 try {
-                        // If this call fails, it will also trigger a call to
-                        // the handleFailure() override.
-                        if (!mPayfoneSDK.isAuthenticationPossible()) {
-                            System.out.println("Not possibleeeeeee!");
-                        } else {
-                            System.out.println("Possibleeeeeee!");
-                            //System.out.println(mPayfoneSDK.isAuthenticationPossible());
-                        }
+                    // If this call fails, it will also trigger a call to
+                    // the handleFailure() override.
+                    if (mPayfoneSDK.isAuthenticationPossible()) {
+                        String myIp = mPayfoneSDK.getDeviceCellularIP();
+                        System.out.println(myIp);
+
+                        OkHttpClient client = new OkHttpClient();
+
+                        String authByRedirectURL = "https://api.staging.payfone.com/mobileauth/2014/07/01/authenticateByRedirect";
+
+                        JSONObject json = new JSONObject();
+                        json.put("RequestId", "1");
+                        json.put("ApiClientId", "JFTmFXW431gN757aPSTG");
+                        json.put("FinalTargetUrl", "http://www.google.com");
+                        json.put("DeviceIp", myIp);
+
+                        RequestBody body = RequestBody.create(JSON, json.toString());
+                        Request request = new Request.Builder()
+                                .url(authByRedirectURL)
+                                .post(body)
+                                .build();
+                        Response response = client.newCall(request).execute();
+
+                        JSONObject resp = new JSONObject(response.body().string());
+                        String redirect_url = resp.getJSONObject("Response").getString("RedirectTargetUrl");
+                        System.out.println(redirect_url);
+
+                        MyResultCallback myResultCallback = new MyResultCallback();
+                        mPayfoneSDK.authenticate(redirect_url, myResultCallback);
+                    } else {
+                        System.out.println("Authentication not possibleeeeeee!");
+                    }
                 } catch (Exception e) {
                     System.out.println("Caught");
+                    System.out.println(e.toString());
                 }
             }
         });
 
         thread.start();
-
 
 
     }
@@ -300,5 +331,60 @@ public class MainActivity extends ListActivity implements SensorEventListener {
     }
 
 
+}
 
+class MyResultCallback implements IResultCallback
+{
+    Boolean mComplete = false;
+    ErrorType mErrorType;
+    String mErrorMessage = null;
+
+    @Override
+    public void success(String authenticatedVFP) {
+        // Submit the VFP to the merchant server. This function will also
+        // probably need to be customized (below) to work with your merchant server
+        // API.
+        System.out.println(authenticatedVFP);
+//        mResultFromServer = submitVFPToMerchantServer(authenticatedVFP);
+//        System.out.println("Result from merchant server:" + mResultFromServer);
+        try {
+
+            OkHttpClient client = new OkHttpClient();
+            String authByRedirectFinishURL = "https://api.staging.payfone.com/mobileauth/2014/07/01/authenticateByRedirectFinish";
+            JSONObject json2 = new JSONObject();
+            json2.put("RequestId", "1");
+            json2.put("ApiClientId", "JFTmFXW431gN757aPSTG");
+            json2.put("VerificationFingerprint", authenticatedVFP);
+
+            RequestBody body2 = RequestBody.create(MainActivity.JSON, json2.toString());
+            Request request2 = new Request.Builder()
+                    .url(authByRedirectFinishURL)
+                    .post(body2)
+                    .build();
+            Response response2 = client.newCall(request2).execute();
+            System.out.println(response2.body().string());
+
+        } catch (Exception e) {
+
+        }
+
+        mComplete = true;
+    }
+
+    @Override
+    public void failure(ErrorType type, String message) {
+        System.out.println("Failed to authenticate:" + message);
+        mComplete = true;
+    }
+
+    @Override
+    public void status(String message) {
+        // Messages sent to this callback are probably safe to ignore.
+        // More messages will be sent if mPayfoneSDK.mDebugMode>0.
+        System.out.println(message);
+    }
+
+    public boolean isComplete() {
+        return mComplete;
+    }
 }
