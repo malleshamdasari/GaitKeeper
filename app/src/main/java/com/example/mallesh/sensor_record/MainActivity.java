@@ -1,26 +1,43 @@
 package com.example.mallesh.sensor_record;
 
-        import android.Manifest;
-        import android.app.Activity;
-        import android.app.ListActivity;
-        import android.content.Context;
-        import android.content.pm.PackageManager;
-        import android.hardware.Sensor;
-        import android.hardware.SensorEvent;
-        import android.hardware.SensorEventListener;
-        import android.hardware.SensorManager;
-        import android.os.Bundle;
-        import android.os.Environment;
-        import android.support.v4.app.ActivityCompat;
-        import android.util.Log;
-        import android.widget.ArrayAdapter;
+import android.Manifest;
+import android.app.Activity;
+import android.app.ListActivity;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.util.Log;
+import android.widget.ArrayAdapter;
 
-        import java.io.File;
-        import java.io.FileOutputStream;
-        import java.io.IOException;
-        import java.io.OutputStream;
-        import java.util.ArrayList;
-        import java.util.List;
+import org.influxdb.BatchOptions;
+import org.influxdb.InfluxDB;
+import org.influxdb.InfluxDBFactory;
+import org.influxdb.dto.Point;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
+import javax.net.ssl.*;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class MainActivity extends ListActivity implements SensorEventListener {
     //global variables
@@ -62,6 +79,11 @@ public class MainActivity extends ListActivity implements SensorEventListener {
             );
         }
     }
+
+    private final static String INFLUX_HOST = "https://influx-cewit.netsmartdev.com:443";
+    private static String INFLUX_DATABASE = "db_team_69";
+    private static String INFLUX_USER = "user_team_69";
+    private static String INFLUX_PASS = "J9sdscUlGImEzBEP";
 
     /** Called when the activity is first created. */
     @Override
@@ -136,6 +158,23 @@ public class MainActivity extends ListActivity implements SensorEventListener {
                 android.R.layout.simple_list_item_1,
                 listSensorType));
         getListView().setTextFilterEnabled(true);
+
+
+        Thread thread = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                try {
+                    System.out.println("Sending");
+                    insertDataPoints(INFLUX_DATABASE, INFLUX_USER, INFLUX_PASS);
+                } catch (Exception e) {
+                    System.out.println("Caught");
+                }
+            }
+        });
+
+        thread.start();
+
     }
 
 
@@ -198,24 +237,115 @@ public class MainActivity extends ListActivity implements SensorEventListener {
 
     }
 
+    private static void insertDataPoints(String database, String user, String password) throws InterruptedException {
 
+        try {
+            final TrustManager[] trustAllCerts = new TrustManager[]{
+                    new X509TrustManager() {
+                        @Override
+                        public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) {
+                        }
+
+                        @Override
+                        public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) {
+                        }
+
+                        @Override
+                        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                            return new java.security.cert.X509Certificate[]{};
+                        }
+                    }
+            };
+
+            // Install the all-trusting trust manager
+            final SSLContext sslContext = SSLContext.getInstance("SSL");
+            sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
+            // Create an ssl socket factory with our all-trusting manager
+            final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
+
+            OkHttpClient.Builder builder = new OkHttpClient.Builder();
+            builder.sslSocketFactory(sslSocketFactory, (X509TrustManager) trustAllCerts[0]);
+            builder.hostnameVerifier(new HostnameVerifier() {
+                @Override
+                public boolean verify(String hostname, SSLSession session) {
+                    return true;
+                }
+            });
+//        OkHttpClient.Builder builder = new OkHttpClient.Builder();
+//        builder.hostnameVerifier(new HostnameVerifier() {
+//            @Override
+//            public boolean verify(String hostname, SSLSession session) {
+//                return true;
+//            }
+//        });
+            try (InfluxDB influxDB = InfluxDBFactory.connect(INFLUX_HOST, user, password, builder)) {
+
+                // Set up exception handler
+                influxDB.enableBatch(BatchOptions.DEFAULTS.exceptionHandler(
+                        (failedPoints, throwable) -> {
+                            for (Point failedPoint : failedPoints) {
+                                System.err.println("[ERROR] Failed Point: " + failedPoint);
+                            }
+                            System.err.println(throwable);
+                        })
+                );
+
+                // Set Database
+                influxDB.setDatabase(database);
+
+                // Create tags
+                Map<String, String> tags = new HashMap<>();
+    //            tags.put("component", "primary_web_app");
+    //            tags.put("type", "method_timer");
+    //            tags.put("user", System.getProperty("user.name"));
+    //            tags.put("os", System.getProperty("os.name"));
+    //            tags.put("hostname", InfluxDBInsert.getHostName());
+
+                // Send 10 random metric values into the database
+                for (int i = 0; i < 10; i++) {
+
+                    // Random response time
+    //                int responseTime = ThreadLocalRandom.current().nextInt(50, 10000);
+    //
+    //                // Random request size
+    //                int payloadSize = ThreadLocalRandom.current().nextInt(1024, 10000);
+
+                    // Create Point
+                    Point point = Point.measurement("request_timer")
+                            .time(System.currentTimeMillis(), TimeUnit.MILLISECONDS)
+                            .tag(tags)
+                            .addField("responseTimeMs", 10000)
+                            .addField("requestSizeBytes", 2000)
+                            .build();
+
+                    // Write Point
+                    influxDB.write(point);
+                    System.out.println("[info] Wrote Point to Influx Db @ " + INFLUX_HOST + "/" + INFLUX_DATABASE);
+
+                    Thread.sleep(2000);
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Something caught");
+        }
+    }
 
 
 
     @Override
     public final void onSensorChanged(SensorEvent event) {
         // TODO Auto-generated method stub
-        System.out.println("++++++++++++++++INSIDE onSensorChanged() ++++++++++++++++++++++");
+//        System.out.println("++++++++++++++++INSIDE onSensorChanged() ++++++++++++++++++++++");
         //System.out.println("sensorName:"+sensorName);
-        System.out.println("event.sensor.getName():"+event.sensor.getName());
+//        System.out.println("event.sensor.getName():"+event.sensor.getName());
         float x,y,z;
 
         x=event.values[0];
         y=event.values[1];
         z=event.values[2];
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println(z);
+//        System.out.println(x);
+//        System.out.println(y);
+//        System.out.println(z);
         //writeDataTofile(event.sensor.getName(),x,y,z);
 
     }

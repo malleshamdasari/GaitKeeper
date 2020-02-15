@@ -1,4 +1,0 @@
-#Sat Feb 15 01:29:53 EST 2020
-base.0=/Users/mallesh/Record-Sensor-Events-Anne-droid/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/Users/mallesh/Record-Sensor-Events-Anne-droid/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

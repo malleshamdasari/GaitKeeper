@@ -1,95 +1,151 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:2:1-22:12
+ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:2:1-23:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cb20b76ed225fe8217fdebe6b4cd159d/constraint-layout-1.0.2/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:17:1-31:12
+INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:2:1-23:12
 	package
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:3:5-48
-		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:3:5-48
+		INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
-	xmlns:android
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:2:11-69
+		INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:5:5-19:19
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:25.3.1] /Users/mallesh/.android/build-cache/b1ded58fbac7ca3338bae6c3d5c1d037b8741486/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/mallesh/.android/build-cache/446dd1afbc8be6e398645f7b7386d6d536cb6e44/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/mallesh/.android/build-cache/fb11b0653ec73ca0224a6bc553e5a6bb85743a07/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/mallesh/.android/build-cache/c0bf30176ddd79431c3a03cac7a154ab1b7d2817/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/mallesh/.android/build-cache/63a356452804300daddd83ddb9d7e0c53f7779d4/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/482b3a094fc61c48d576bc26e773d8992acbdae6/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/a38ad6822e21327877dec718f14817e3583bba58/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /Users/mallesh/.android/build-cache/48d61c0d60252a22f293f54d320131f59854a637/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/mallesh/.android/build-cache/f4718d85af6d750b3a9839c9d02ee7f94167f8ac/output/AndroidManifest.xml:9:5-20
-	android:label
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:8:9-41
+ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cb20b76ed225fe8217fdebe6b4cd159d/constraint-layout-1.0.2/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cb20b76ed225fe8217fdebe6b4cd159d/constraint-layout-1.0.2/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:29:5-20
 	android:supportsRtl
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:9:9-54
-	android:allowBackup
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:11:9-40
 activity#com.example.mallesh.sensor_record.MainActivity
-ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:12:9-18:20
+ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:12:19-47
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:13:13-17:29
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:14:17-69
+ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:16:17-77
+ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:16:27-74
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:16:27-74
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:20:5-80
+ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:20:5-80
 	android:name
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:20:22-77
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:20:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:21:5-81
+ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:21:5-81
 	android:name
-		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:21:22-78
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:21:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:22:5-66
+	android:name
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml:22:22-64
 uses-sdk
-INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:25.3.1] /Users/mallesh/.android/build-cache/b1ded58fbac7ca3338bae6c3d5c1d037b8741486/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/mallesh/.android/build-cache/446dd1afbc8be6e398645f7b7386d6d536cb6e44/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/mallesh/.android/build-cache/fb11b0653ec73ca0224a6bc553e5a6bb85743a07/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/mallesh/.android/build-cache/c0bf30176ddd79431c3a03cac7a154ab1b7d2817/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/mallesh/.android/build-cache/63a356452804300daddd83ddb9d7e0c53f7779d4/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/482b3a094fc61c48d576bc26e773d8992acbdae6/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/a38ad6822e21327877dec718f14817e3583bba58/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-compat:25.3.1] /Users/mallesh/.android/build-cache/48d61c0d60252a22f293f54d320131f59854a637/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/mallesh/.android/build-cache/f4718d85af6d750b3a9839c9d02ee7f94167f8ac/output/AndroidManifest.xml:5:5-7:41
+INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cb20b76ed225fe8217fdebe6b4cd159d/constraint-layout-1.0.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cb20b76ed225fe8217fdebe6b4cd159d/constraint-layout-1.0.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/santiagovargas/Desktop/hackathon/Record-Sensors-Android/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-v4:25.3.1] /Users/mallesh/.android/build-cache/b1ded58fbac7ca3338bae6c3d5c1d037b8741486/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/mallesh/.android/build-cache/446dd1afbc8be6e398645f7b7386d6d536cb6e44/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/mallesh/.android/build-cache/fb11b0653ec73ca0224a6bc553e5a6bb85743a07/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/mallesh/.android/build-cache/c0bf30176ddd79431c3a03cac7a154ab1b7d2817/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/mallesh/.android/build-cache/63a356452804300daddd83ddb9d7e0c53f7779d4/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/482b3a094fc61c48d576bc26e773d8992acbdae6/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/a38ad6822e21327877dec718f14817e3583bba58/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-compat:25.3.1] /Users/mallesh/.android/build-cache/48d61c0d60252a22f293f54d320131f59854a637/output/AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/santiagovargas/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:26:9-47
