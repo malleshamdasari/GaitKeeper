@@ -33,4 +33,5 @@ dependencies {
     compile 'org.influxdb:influxdb-java:2.17'
     compile 'com.squareup.okhttp3:okhttp:3.5.0'
     testCompile 'junit:junit:4.12'
+    implementation files('lib/payfoneSDK_1.5.jar')
 }

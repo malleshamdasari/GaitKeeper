@@ -1,7 +1,13 @@
 package com.example.mallesh.sensor_record;
 
+import com.payfone.sdk.*;
+
+import android.app.AlertDialog;
+import android.provider.Settings;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -62,14 +68,96 @@ public class MainActivity extends ListActivity implements SensorEventListener {
         _t.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                System.out.println("Sending Data Points");
+                //System.out.println("Sending Data Points");
                 try {
-                    insertDataPoints(INFLUX_DATABASE, INFLUX_USER, INFLUX_PASS);
+                    //insertDataPoints(INFLUX_DATABASE, INFLUX_USER, INFLUX_PASS);
                 } catch (Exception e) {
                     System.out.println("Caught something");
                 }
             }
         }, 0, reporting_period_ms);
+
+
+        /// [Options Example]
+        PayfoneOptions payfoneOptions = new PayfoneOptions() {
+        /*
+            The required override: You need to provide the Payfone SDK with
+            the Activity that will be active while the authentication is taking
+            place.
+         */
+        @Override
+        public MainActivity getActivity() {
+            return MainActivity.this;
+        }
+
+        /*
+            Optional override.
+
+            If you want to handle specific failure modes in a custom manner,
+            this is the place to add such code. Otherwise you can leave the
+            default handler in place.
+         */
+        @Override
+        public void handleFailure(final PayfoneOptions.FailureMode failureMode, String message) {
+            AlertDialog.Builder alert = new
+                    AlertDialog.Builder(MainActivity.this);
+            alert.setTitle("Authentication Failed");
+            alert.setMessage(message);
+            alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    if (failureMode == FailureMode.WIFI_CALLING_ENABLED) {
+                        startActivity(new
+                                Intent(Settings.ACTION_WIFI_SETTINGS));
+                    } // else do nothing
+                }
+            });
+
+            alert.show();
+            System.out.println(message);
+        }
+
+        /*
+            An optional override that you can supply that will notify you when
+            the device cellular IP is available. It will call your code in the
+            UI thread, so it's safe to use the result to set a UI field, as in
+            the example below.
+
+            It's safe to delete this override if you don't need it.
+         */
+        @Override
+        public void identifiedCellularIP(final String deviceCellularIP) {
+            System.out.println("Found IP Address:" + deviceCellularIP);
+        }
+        };
+        payfoneOptions.mDebugMode = 1;
+        // Create the PayfoneSDK using the options set above.
+        PayfoneSDK mPayfoneSDK = new PayfoneSDK(payfoneOptions);
+
+        Thread thread = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+
+                    System.out.println("Payphone stuff");
+                try {
+                        // If this call fails, it will also trigger a call to
+                        // the handleFailure() override.
+                        if (!mPayfoneSDK.isAuthenticationPossible()) {
+                            System.out.println("Not possibleeeeeee!");
+                        } else {
+                            System.out.println("Possibleeeeeee!");
+                            //System.out.println(mPayfoneSDK.isAuthenticationPossible());
+                        }
+                } catch (Exception e) {
+                    System.out.println("Caught");
+                }
+            }
+        });
+
+        thread.start();
+
+
+
     }
 
     protected void onResume() {
@@ -189,7 +277,7 @@ public class MainActivity extends ListActivity implements SensorEventListener {
     @Override
     public final void onSensorChanged(SensorEvent event) {
         String sensor_name = event.sensor.getName();
-        System.out.println("event.sensor.getName():" + sensor_name);
+        //System.out.println("event.sensor.getName():" + sensor_name);
 
         switch (sensor_name) {
             case "LSM6DSM Accelerometer":
@@ -210,4 +298,7 @@ public class MainActivity extends ListActivity implements SensorEventListener {
 //        System.out.println(acc_y);
 //        System.out.println(acc_z);
     }
+
+
+
 }

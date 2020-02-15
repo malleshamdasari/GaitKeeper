@@ -1,0 +1,51 @@
+/// [Options Example]
+        PayfoneOptions payfoneOptions=new PayfoneOptions(){
+            /*
+                The required override: You need to provide the Payfone SDK with
+                the Activity that will be active while the authentication is taking
+                place.
+             */
+@Override
+public Activity getActivity(){
+        return AuthenticationSample.this;
+        }
+
+            /*
+                Optional override.
+
+                If you want to handle specific failure modes in a custom manner,
+                this is the place to add such code. Otherwise you can leave the
+                default handler in place.
+             */
+@Override
+public void handleFailure(final PayfoneOptions.FailureMode failureMode,String message){
+        AlertDialog.Builder alert=new
+        AlertDialog.Builder(AuthenticationSample.this);
+        alert.setTitle("Authentication Failed");
+        alert.setMessage(message);
+        alert.setPositiveButton("Ok",new DialogInterface.OnClickListener(){
+public void onClick(DialogInterface dialog,int whichButton){
+        if(failureMode==FailureMode.WIFI_CALLING_ENABLED){
+        startActivity(new
+        Intent(Settings.ACTION_WIFI_SETTINGS));
+        } // else do nothing
+        }
+        });
+
+        alert.show();
+        showStatus(message);
+        }
+
+            /*
+                An optional override that you can supply that will notify you when
+                the device cellular IP is available. It will call your code in the
+                UI thread, so it's safe to use the result to set a UI field, as in
+                the example below.
+
+                It's safe to delete this override if you don't need it.
+             */
+@Override
+public void identifiedCellularIP(final String deviceCellularIP){
+        showStatus("Found IP Address:"+deviceCellularIP);
+        }
+        };
