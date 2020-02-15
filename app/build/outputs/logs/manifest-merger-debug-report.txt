@@ -1,95 +1,95 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:2:1-22:12
+ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:2:1-22:12
 	package
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:3:5-48
-		INJECTED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml
-		INJECTED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:3:5-48
+		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml
-		INJECTED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml
-		INJECTED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
 application
-ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:5:5-19:19
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/mallesh/.android/build-cache/451508fb93555b12cf6e0217fa68447bfe7da4cc/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:25.3.1] /home/mallesh/.android/build-cache/814b3228b11f0c7815c98f7ed33f6e1fe151568f/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /home/mallesh/.android/build-cache/1c1cb37727433441ad6f77b61dece855a49d6844/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/mallesh/.android/build-cache/dbcd2b37407679a685c3691aff20c9ac9ce87406/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/mallesh/.android/build-cache/a860a3cbbd9e3d47b7fa3949e53640f8137b694b/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/mallesh/.android/build-cache/4ed0b2623174afe45d1dc151aaf4c1e947dd3355/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/mallesh/.android/build-cache/93e910a170ddd0fdf1f2853203876e35be5a460d/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/mallesh/.android/build-cache/6c85860baca500a6db13517bfd510ed3f6727ab1/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /home/mallesh/.android/build-cache/12e2cb954d53981f0632d578010083ca2daf0834/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/mallesh/.android/build-cache/2e356010f009d76bd82aaa94f5d85c19e48cb015/output/AndroidManifest.xml:9:5-20
+ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/mallesh/.android/build-cache/b1ded58fbac7ca3338bae6c3d5c1d037b8741486/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/mallesh/.android/build-cache/446dd1afbc8be6e398645f7b7386d6d536cb6e44/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/mallesh/.android/build-cache/fb11b0653ec73ca0224a6bc553e5a6bb85743a07/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/mallesh/.android/build-cache/c0bf30176ddd79431c3a03cac7a154ab1b7d2817/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/mallesh/.android/build-cache/63a356452804300daddd83ddb9d7e0c53f7779d4/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/482b3a094fc61c48d576bc26e773d8992acbdae6/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/a38ad6822e21327877dec718f14817e3583bba58/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/mallesh/.android/build-cache/48d61c0d60252a22f293f54d320131f59854a637/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/mallesh/.android/build-cache/f4718d85af6d750b3a9839c9d02ee7f94167f8ac/output/AndroidManifest.xml:9:5-20
 	android:label
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:8:9-41
 	android:supportsRtl
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:10:9-35
 	android:roundIcon
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:9:9-54
 	android:allowBackup
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:6:9-35
 	android:icon
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:7:9-43
 	android:theme
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:11:9-40
 activity#com.example.mallesh.sensor_record.MainActivity
-ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:12:9-18:20
+ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:12:19-47
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:12:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:13:13-17:29
+ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:14:17-69
+ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:16:17-77
+ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:16:27-74
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:16:27-74
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:20:5-80
+ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:20:5-80
 	android:name
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:20:22-77
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:20:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:21:5-81
+ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:21:5-81
 	android:name
-		ADDED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml:21:22-78
+		ADDED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml:21:22-78
 uses-sdk
-INJECTED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/mallesh/.android/build-cache/451508fb93555b12cf6e0217fa68447bfe7da4cc/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:25.3.1] /home/mallesh/.android/build-cache/814b3228b11f0c7815c98f7ed33f6e1fe151568f/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] /home/mallesh/.android/build-cache/1c1cb37727433441ad6f77b61dece855a49d6844/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/mallesh/.android/build-cache/dbcd2b37407679a685c3691aff20c9ac9ce87406/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/mallesh/.android/build-cache/a860a3cbbd9e3d47b7fa3949e53640f8137b694b/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/mallesh/.android/build-cache/4ed0b2623174afe45d1dc151aaf4c1e947dd3355/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/mallesh/.android/build-cache/93e910a170ddd0fdf1f2853203876e35be5a460d/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/mallesh/.android/build-cache/6c85860baca500a6db13517bfd510ed3f6727ab1/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-compat:25.3.1] /home/mallesh/.android/build-cache/12e2cb954d53981f0632d578010083ca2daf0834/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/mallesh/.android/build-cache/2e356010f009d76bd82aaa94f5d85c19e48cb015/output/AndroidManifest.xml:5:5-7:41
+INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] /Users/mallesh/.android/build-cache/b1ded58fbac7ca3338bae6c3d5c1d037b8741486/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/mallesh/.android/build-cache/446dd1afbc8be6e398645f7b7386d6d536cb6e44/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/mallesh/.android/build-cache/fb11b0653ec73ca0224a6bc553e5a6bb85743a07/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/mallesh/.android/build-cache/c0bf30176ddd79431c3a03cac7a154ab1b7d2817/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/mallesh/.android/build-cache/63a356452804300daddd83ddb9d7e0c53f7779d4/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/482b3a094fc61c48d576bc26e773d8992acbdae6/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/a38ad6822e21327877dec718f14817e3583bba58/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /Users/mallesh/.android/build-cache/48d61c0d60252a22f293f54d320131f59854a637/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/mallesh/.android/build-cache/f4718d85af6d750b3a9839c9d02ee7f94167f8ac/output/AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:25.3.1] /home/mallesh/.android/build-cache/451508fb93555b12cf6e0217fa68447bfe7da4cc/output/AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml
-		INJECTED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml
-		INJECTED from /home/mallesh/Desktop/sensor/sensor_record/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mallesh/Record-Sensor-Events-Anne-droid/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:25.3.1] /home/mallesh/.android/build-cache/451508fb93555b12cf6e0217fa68447bfe7da4cc/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-v4:25.3.1] /home/mallesh/.android/build-cache/814b3228b11f0c7815c98f7ed33f6e1fe151568f/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /home/mallesh/.android/build-cache/1c1cb37727433441ad6f77b61dece855a49d6844/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/mallesh/.android/build-cache/dbcd2b37407679a685c3691aff20c9ac9ce87406/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/mallesh/.android/build-cache/a860a3cbbd9e3d47b7fa3949e53640f8137b694b/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/mallesh/.android/build-cache/4ed0b2623174afe45d1dc151aaf4c1e947dd3355/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/mallesh/.android/build-cache/93e910a170ddd0fdf1f2853203876e35be5a460d/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/mallesh/.android/build-cache/6c85860baca500a6db13517bfd510ed3f6727ab1/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-compat:25.3.1] /home/mallesh/.android/build-cache/12e2cb954d53981f0632d578010083ca2daf0834/output/AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/mallesh/.android/build-cache/b1ded58fbac7ca3338bae6c3d5c1d037b8741486/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/mallesh/.android/build-cache/446dd1afbc8be6e398645f7b7386d6d536cb6e44/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/mallesh/.android/build-cache/fb11b0653ec73ca0224a6bc553e5a6bb85743a07/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/mallesh/.android/build-cache/c0bf30176ddd79431c3a03cac7a154ab1b7d2817/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/mallesh/.android/build-cache/63a356452804300daddd83ddb9d7e0c53f7779d4/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/482b3a094fc61c48d576bc26e773d8992acbdae6/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/mallesh/.android/build-cache/a38ad6822e21327877dec718f14817e3583bba58/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/mallesh/.android/build-cache/48d61c0d60252a22f293f54d320131f59854a637/output/AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:appcompat-v7:25.3.1] /home/mallesh/.android/build-cache/451508fb93555b12cf6e0217fa68447bfe7da4cc/output/AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:appcompat-v7:25.3.1] /home/mallesh/.android/build-cache/451508fb93555b12cf6e0217fa68447bfe7da4cc/output/AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/mallesh/.android/build-cache/841556793115f7721b9e6bf080a339b39e08caef/output/AndroidManifest.xml:26:9-47

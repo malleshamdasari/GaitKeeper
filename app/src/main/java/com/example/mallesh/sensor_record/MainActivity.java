@@ -100,25 +100,24 @@ public class MainActivity extends ListActivity implements SensorEventListener {
         listSensor
                 = sensorManager.getSensorList(Sensor.TYPE_ALL);
         mAccelerometer=sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        mAmbientTemp=sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
-        mGameRotationVect=sensorManager.getDefaultSensor(Sensor.TYPE_GAME_ROTATION_VECTOR);
-        mGeomagneticRotationVecor=sensorManager.getDefaultSensor(Sensor.TYPE_GEOMAGNETIC_ROTATION_VECTOR);
-        mGravity=sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY);
-        mGyroscope=sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
-        mGyroUncal=sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE_UNCALIBRATED);
-        mLight=sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-        mLinearAcceleration=sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
-        mMagFld=sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-        mMagFldUncal=sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD_UNCALIBRATED);
-        mOrientation=sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
-        mPressure=sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE);
-        mProximity=sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-        mRelativeHumid=sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY);
-        mRotVect=sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
-        mSignificantMotion=sensorManager.getDefaultSensor(Sensor.TYPE_SIGNIFICANT_MOTION);
-        mStepCntr=sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-        mStepDetect=sensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
-        mTemp=sensorManager.getDefaultSensor(Sensor.TYPE_TEMPERATURE);
+//        mAmbientTemp=sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
+//        mGameRotationVect=sensorManager.getDefaultSensor(Sensor.TYPE_GAME_ROTATION_VECTOR);
+//        mGeomagneticRotationVecor=sensorManager.getDefaultSensor(Sensor.TYPE_GEOMAGNETIC_ROTATION_VECTOR);
+//        mGravity=sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY);
+//        mGyroscope=sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+//        mGyroUncal=sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE_UNCALIBRATED);
+//        mLight=sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+//        mLinearAcceleration=sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
+//        mMagFld=sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+//        mMagFldUncal=sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD_UNCALIBRATED);
+//        mOrientation=sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
+//        mPressure=sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE);
+//        mProximity=sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+//        mRelativeHumid=sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY);
+//        mRotVect=sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
+//        mSignificantMotion=sensorManager.getDefaultSensor(Sensor.TYPE_SIGNIFICANT_MOTION);
+//        mStepCntr=sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+//        mStepDetect=sensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
 
         //Creating List view and writing data to a file
 
@@ -162,25 +161,24 @@ public class MainActivity extends ListActivity implements SensorEventListener {
     protected void onResume() {
         super.onResume();
         sensorManager.registerListener(this,mAccelerometer,  SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this,mAmbientTemp,  SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, mGameRotationVect, SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this,mGeomagneticRotationVecor,  SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, mGravity,  SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, mGyroscope, SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, mGyroUncal, SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, mLight,  SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, mLinearAcceleration, SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this,mMagFld,  SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this,mMagFldUncal,  SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this,mOrientation,   SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this,mPressure,   SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, mRelativeHumid, SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this,mRotVect,  SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, mSignificantMotion, SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this,mStepCntr,   SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, mStepDetect, SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, mTemp, SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this,mAmbientTemp,  SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this, mGameRotationVect, SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this,mGeomagneticRotationVecor,  SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this, mGravity,  SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this, mGyroscope, SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this, mGyroUncal, SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this, mLight,  SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this, mLinearAcceleration, SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this,mMagFld,  SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this,mMagFldUncal,  SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this,mOrientation,   SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this,mPressure,   SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this, mRelativeHumid, SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this,mRotVect,  SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this, mSignificantMotion, SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this,mStepCntr,   SensorManager.SENSOR_DELAY_NORMAL);
+//        sensorManager.registerListener(this, mStepDetect, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
@@ -215,7 +213,10 @@ public class MainActivity extends ListActivity implements SensorEventListener {
         x=event.values[0];
         y=event.values[1];
         z=event.values[2];
-        writeDataTofile(event.sensor.getName(),x,y,z);
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
+        //writeDataTofile(event.sensor.getName(),x,y,z);
 
     }
     public void writeDataTofile(String sensorsName, float x, float y, float z){
