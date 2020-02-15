@@ -41,7 +41,7 @@ tags = {"component":"primary_web_app","type":'method_timer',"hostname":platform.
 # Establish connection to database
 client = InfluxDBClient(INFLUX_HOST, 443, INFLUX_USER, INFLUX_PASS, INFLUX_DATABASE,True,False)
 
-def test():
+def generate_data():
     # Send 10 random metric values into the database
     for x in range(10):
         try:
@@ -69,7 +69,7 @@ def test():
     
 print(client.get_list_database())
 print(client.get_list_measurements())
-client.drop_measurement('request_timer')
-#test()
+#client.drop_measurement('request_timer')
+#generate_data()
 print(client.get_list_measurements())
-print(client.query('SELECT * from request_timer'))
+print(client.query('SELECT * from fake_sensor_data'))
