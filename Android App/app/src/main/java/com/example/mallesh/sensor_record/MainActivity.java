@@ -42,6 +42,7 @@ public class MainActivity extends ListActivity implements SensorEventListener {
     private final static String INFLUX_DATABASE = "db_team_69";
     private final static String INFLUX_USER = "user_team_69";
     private final static String INFLUX_PASS = "J9sdscUlGImEzBEP";
+    private final static String measurement_name = "sensor_data2";
     private final static int reporting_period_ms = 10;
     private final static int token_update_period_ms = 10000;
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
@@ -283,7 +284,7 @@ public class MainActivity extends ListActivity implements SensorEventListener {
                 System.out.println(acc_z);
 
                 // Create Point
-                Point point = Point.measurement("sensor_data")
+                Point point = Point.measurement(measurement_name)
                         .time(System.currentTimeMillis(), TimeUnit.MILLISECONDS)
                         .tag(tags)
                         .addField("acc_x", acc_x)
