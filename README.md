@@ -14,7 +14,11 @@ There are three parts to the GaitKeeper service:
 3. We combine the trust score from Payfone Inc and combine with our sensor data and propose a unified metric called 'Heimdall score'. A reporting portal that allows users and admins to view recent changes to their Heimdall Score.
 
 # Challenges we ran into
-One of the grand challenges in achieving this interactionless authentication system is that there is no one metric that can identify a user perfectly. It is nontrivial to use identify a user with any single metric. 
+A key challenge in achieving this interactionless authentication system is that there is no one metric that can identify a user perfectly. It is nontrivial to use identify a user with any single metric. 
 GaitKeeper solves this challenge by leveraging multitudes of sensor data from users' smartphones to model the corresponding the user behaviour and there by identifying the user identity. Another key challenge is that it is extremely hard to fuse this large data from sensors in an efficient way. GaitKeeper derives a blackbox model to understand the complex relationships among the sensors data using the neural networks. 
 
+# Accomplishments that we're proud of
+One major benefit of GaitKeeper is that it can compute the Heimdall score with no cost. The sensor data ubiquoutous. There is no need to change the user's device hardware. Existing the authentication systems such as Payfone Inc can use this model directly in their system instead of just trust score. We are extremely proud of the accuracy and the responsivenes of Heimdall score compared to Payfone's trust score. 
+
+# What we learned
 
