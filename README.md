@@ -21,4 +21,7 @@ GaitKeeper solves this challenge by leveraging multitudes of sensor data from us
 One major benefit of GaitKeeper is that it can compute the Heimdall score with no cost. The sensor data ubiquoutous. There is no need to change the user's device hardware. Existing the authentication systems such as Payfone Inc can use this model directly in their system instead of just trust score. We are extremely proud of the accuracy and the responsivenes of Heimdall score compared to Payfone's trust score. 
 
 # What we learned
+We first learned a great deal of Payfone's authentication APIs to get their trust score feature for our model. This involved learning Android App development, tweaking Java code, Rest calls etc. Another interesting takeaway from the project is that there is a lot of sensor data that we collect from smartphones and use it for several other purposes apart from authentication. A fun fact: we learned that you cannot know your mobile number programmatically. 
 
+# What's next for GaitKeeper
+We envision multiple future directions for GaitKeeper. First, responsiveness of GaitKeeper is very important specifically when it scales to millions of users. A commercial authentication provider such as Payfone can take this further and develop a decentralized verison of GaitKeeper for scalability, elasticity and efficiency purposes. Second, GaitKeeper can transformed into a generic platform where it collects any type of data, fuses the data using machine learning, and provides APIs for developers to operate the data. 
