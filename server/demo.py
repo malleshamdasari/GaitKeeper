@@ -27,6 +27,7 @@ json_list = get_json()
 data = data_load(json_list, keys)
 
 '''
+#visualize the data sequences
 #fig, axes = plt.subplots(6)
 
 #for idx, ax in enumerate(axes):
