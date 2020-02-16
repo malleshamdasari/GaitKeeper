@@ -1,7 +1,5 @@
 package com.example.mallesh.sensor_record;
 
-import com.payfone.sdk.*;
-
 import android.app.AlertDialog;
 import android.provider.Settings;
 import android.app.ListActivity;
@@ -14,11 +12,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 
-import org.influxdb.BatchOptions;
-import org.influxdb.InfluxDB;
-import org.influxdb.InfluxDBFactory;
-import org.influxdb.dto.Point;
-
+import javax.net.ssl.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +20,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import javax.net.ssl.*;
+import org.influxdb.BatchOptions;
+import org.influxdb.InfluxDB;
+import org.influxdb.InfluxDBFactory;
+import org.influxdb.dto.Point;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -34,27 +31,33 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.MediaType;
 import okhttp3.FormBody;
+
 import org.json.JSONObject;
 
+import com.payfone.sdk.*;
+
 public class MainActivity extends ListActivity implements SensorEventListener {
-    //global variables
+    // Constants
+    private final static String INFLUX_HOST = "https://influx-cewit.netsmartdev.com:443";
+    private final static String INFLUX_DATABASE = "db_team_69";
+    private final static String INFLUX_USER = "user_team_69";
+    private final static String INFLUX_PASS = "J9sdscUlGImEzBEP";
+    private final static int reporting_period_ms = 10;
+    private final static int token_update_period_ms = 10000;
+    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+
+    // Global variables
     public SensorEventListener mSensorListener;
     public SensorManager sensorManager;
     public List<Sensor> listSensor;
     private Sensor mAccelerometer, mGyroscope;
-    private static float acc_x = -1;
-    private static float acc_y = -1;
-    private static float acc_z = -1;
-    private static float gyro_x = -1;
-    private static float gyro_y = -1;
-    private static float gyro_z = -1;
-
-    private final static String INFLUX_HOST = "https://influx-cewit.netsmartdev.com:443";
-    private static String INFLUX_DATABASE = "db_team_69";
-    private static String INFLUX_USER = "user_team_69";
-    private static String INFLUX_PASS = "J9sdscUlGImEzBEP";
-
-    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+    private static float acc_x = 0;
+    private static float acc_y = 0;
+    private static float acc_z = 0;
+    private static float gyro_x = 0;
+    private static float gyro_y = 0;
+    private static float gyro_z = 0;
+    public static float t_score = -1;
 
     /**
      * Called when the activity is first created.
@@ -71,14 +74,13 @@ public class MainActivity extends ListActivity implements SensorEventListener {
         mAccelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mGyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
-        int reporting_period_ms = 10;
         Timer _t = new Timer();
         _t.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                //System.out.println("Sending Data Points");
+                System.out.println("Sending Data Points");
                 try {
-                    //insertDataPoints(INFLUX_DATABASE, INFLUX_USER, INFLUX_PASS);
+                    insertDataPoints(INFLUX_DATABASE, INFLUX_USER, INFLUX_PASS);
                 } catch (Exception e) {
                     System.out.println("Caught something");
                 }
@@ -141,12 +143,11 @@ public class MainActivity extends ListActivity implements SensorEventListener {
         // Create the PayfoneSDK using the options set above.
         PayfoneSDK mPayfoneSDK = new PayfoneSDK(payfoneOptions);
 
-        Thread thread = new Thread(new Runnable() {
-
+        Timer tokenUpdateTimer = new Timer();
+        tokenUpdateTimer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-
-                System.out.println("Payphone stuff");
+                System.out.println("Updating Payphone Token");
                 try {
                     // If this call fails, it will also trigger a call to
                     // the handleFailure() override.
@@ -185,11 +186,7 @@ public class MainActivity extends ListActivity implements SensorEventListener {
                     System.out.println(e.toString());
                 }
             }
-        });
-
-        thread.start();
-
-
+        }, 0, token_update_period_ms);
     }
 
     protected void onResume() {
@@ -286,15 +283,16 @@ public class MainActivity extends ListActivity implements SensorEventListener {
                 System.out.println(acc_z);
 
                 // Create Point
-                Point point = Point.measurement("fake_sensor_data")
+                Point point = Point.measurement("sensor_data")
                         .time(System.currentTimeMillis(), TimeUnit.MILLISECONDS)
                         .tag(tags)
-                        .addField("fake_acc_x", acc_x)
-                        .addField("fake_acc_y", acc_y)
-                        .addField("fake_acc_z", acc_z)
-                        .addField("fake_gyro_x", gyro_x)
-                        .addField("fake_gyro_y", gyro_y)
-                        .addField("fake_gyro_z", gyro_z)
+                        .addField("acc_x", acc_x)
+                        .addField("acc_y", acc_y)
+                        .addField("acc_z", acc_z)
+                        .addField("gyro_x", gyro_x)
+                        .addField("gyro_y", gyro_y)
+                        .addField("gyro_z", gyro_z)
+                        .addField("trust_score", t_score)
                         .build();
 
                 // Write Point
@@ -334,8 +332,7 @@ public class MainActivity extends ListActivity implements SensorEventListener {
 
 }
 
-class MyResultCallback implements IResultCallback
-{
+class MyResultCallback implements IResultCallback {
     Boolean mComplete = false;
     ErrorType mErrorType;
     String mErrorMessage = null;
@@ -401,6 +398,7 @@ class MyResultCallback implements IResultCallback
             Response response3 = client.newCall(request3).execute();
 
             String trust_score = new JSONObject(response3.body().string()).getJSONObject("response").getString("trustScore");
+            MainActivity.t_score = Integer.parseInt(trust_score);
             System.out.println("Trust Score: " + trust_score);
         } catch (Exception e) {
 
