@@ -33,14 +33,13 @@ client = InfluxDBClient(INFLUX_HOST, 443, INFLUX_USER, INFLUX_PASS, INFLUX_DATAB
 
 #json structure
 '''
- {'time': '2020-02-15T17:24:20.421Z', 'trust_score' : 750,
+ {'time': '2020-02-15T17:24:20.421Z',
  'acc_x': 3.83203125, 'acc_y': 3.90264892578125, 'acc_z': 8.356124877929688,
  'gyro_x': 0.0291290283203125, 'gyro_y': -0.156402587890625, 'gyro_z': -0.3584442138671875}
 '''
 # Get current user running your process
 getUser = lambda: environ["USERNAME"] if "C:" in getcwd() else environ["USER"]
 USERNAME = getUser()
-
 
 def send(data):
 
@@ -52,11 +51,10 @@ def send(data):
     pointsArray=[newPointObject.__dict__]
     resultBool = client.write_points(pointsArray)
 
-
 def get_json():
     # Add various tags (meta data) to 'group by' in the charts, providing many ways to filter and group on your measurements.
     tags = {"component":"primary_web_app","type":'method_timer',"hostname":platform.uname()[1],"os":platform.uname()[2],"user":USERNAME}
-    client_data = client.query('SELECT * from sensor_data')
+    client_data = client.query('SELECT * from sensor_data2')
 
     return client_data
 
@@ -177,6 +175,68 @@ def train_test_divide(x_data, y_label, ratio = 0.8):
     test_y_data = y_label[train_size:]
 
     return train_x_data, train_y_data, test_x_data, test_y_data
+
+def DetectFirstValid(data, unit_period_length, valid_threshold, boundary):
+
+    num_period = int(len(data) / unit_period_length)
+
+    sum_list = []
+
+    for period_idx in range(num_period):
+
+        sum_list.append(np.square(data[period_idx*unit_period_length:(period_idx+1)*unit_period_length]).sum())
+
+    valid_count = 0
+    sum_mean = np.array(sum_list).mean()
+
+    for idx, sum_value in enumerate(sum_list):
+
+        if sum_value > 100: #sum_value >= sum_mean*boundary and
+            valid_count += 1
+        else:
+
+            if sum_value >= boundary*100:
+                    valid_count += 1
+            elif (1+boundary)*sum_mean >= sum_value >= sum_mean*(1-boundary):
+                valid_count += 1
+            else:
+                valid_count = 0
+
+        if valid_count == valid_threshold:
+            break
+
+    return idx-valid_threshold + 1
+
+def DetectEndValid(data, unit_period_length, valid_threshold, boundary):
+
+    num_period = int(len(data) / unit_period_length)
+
+    sum_list = []
+
+    for period_idx in range(num_period):
+
+        sum_list.append(np.square(data[period_idx*unit_period_length:(period_idx+1)*unit_period_length]).sum())
+
+    valid_count = 0
+    sum_mean = np.array(sum_list).mean()
+
+    for idx, sum_value in enumerate(sum_list):
+
+        if sum_value > 100: #sum_value >= sum_mean*boundary and
+            valid_count += 1
+        else:
+
+            if sum_value >= boundary*100:
+                    valid_count += 1
+            elif (1+boundary)*sum_mean >= sum_value >= sum_mean*(1-boundary):
+                valid_count += 1
+            else:
+                valid_count = 0
+
+        if valid_count == valid_threshold:
+            break
+
+    return idx-valid_threshold + 2
 
 
 
