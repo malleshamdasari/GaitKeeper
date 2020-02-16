@@ -1,4 +1,4 @@
-#GiatKeeper: A Zero-login Authentication System
+# GiatKeeper: A Zero-login Authentication System
 <p align="center">
   <img src="assets/dash.png" width="800" height="300" />
 </p>
