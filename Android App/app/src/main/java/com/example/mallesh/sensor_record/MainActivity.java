@@ -33,6 +33,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.MediaType;
+import okhttp3.FormBody;
 import org.json.JSONObject;
 
 public class MainActivity extends ListActivity implements SensorEventListener {
@@ -351,19 +352,56 @@ class MyResultCallback implements IResultCallback
 
             OkHttpClient client = new OkHttpClient();
             String authByRedirectFinishURL = "https://api.staging.payfone.com/mobileauth/2014/07/01/authenticateByRedirectFinish";
-            JSONObject json2 = new JSONObject();
-            json2.put("RequestId", "1");
-            json2.put("ApiClientId", "JFTmFXW431gN757aPSTG");
-            json2.put("VerificationFingerprint", authenticatedVFP);
+            JSONObject json = new JSONObject();
+            json.put("RequestId", "1");
+            json.put("ApiClientId", "JFTmFXW431gN757aPSTG");
+            json.put("VerificationFingerprint", authenticatedVFP);
 
-            RequestBody body2 = RequestBody.create(MainActivity.JSON, json2.toString());
-            Request request2 = new Request.Builder()
+            RequestBody body = RequestBody.create(MainActivity.JSON, json.toString());
+            Request request = new Request.Builder()
                     .url(authByRedirectFinishURL)
-                    .post(body2)
+                    .post(body)
+                    .build();
+            Response response = client.newCall(request).execute();
+
+            JSONObject jsonResp = new JSONObject(response.body().string());
+            String phoneNum = jsonResp.getJSONObject("Response").getString("MobileNumber");
+
+            String oauthTokenURL = "https://api.staging.payfone.com/token";
+
+            RequestBody formBody = new FormBody.Builder()
+                    .add("username", "82827dcf-7620-45a7-a56c-09f09964732e")
+                    .add("password", "955c8dac-b0cd-4174-8f75-67d58f9f2b45")
+                    .add("client_id", "hackathon")
+                    .add("grant_type", "password")
+                    .build();
+            Request request2 = new Request.Builder()
+                    .url(oauthTokenURL)
+                    .post(formBody)
                     .build();
             Response response2 = client.newCall(request2).execute();
-            System.out.println(response2.body().string());
+            JSONObject jsonResp2 = new JSONObject(response2.body().string());
+            String oauthToken = jsonResp2.getString("access_token");
+            System.out.println("Token: " + oauthToken);
 
+            // Get device trust score
+            String trustScoreURL = "https://api.staging.payfone.com/trust/v2";
+            JSONObject json2 = new JSONObject();
+            json2.put("authorization", "Bearer " + oauthToken);
+            json2.put("requestId", "2");
+            json2.put("constentStatus", "optedIn");
+            json2.put("phonenumber", phoneNum);
+
+            RequestBody body3 = RequestBody.create(MainActivity.JSON, json2.toString());
+            Request request3 = new Request.Builder()
+                    .url(trustScoreURL)
+                    .post(body3)
+                    .addHeader("Authorization", "Bearer " + oauthToken)
+                    .build();
+            Response response3 = client.newCall(request3).execute();
+
+            String trust_score = new JSONObject(response3.body().string()).getJSONObject("response").getString("trustScore");
+            System.out.println("Trust Score: " + trust_score);
         } catch (Exception e) {
 
         }
