@@ -1,3 +1,8 @@
+#GiatKeeper: A Zero-login Authentication System
+<p align="center">
+  <img src="assets/dash.png" width="1080" height="200" />
+</p>
+
 # Inspiration
 A fundamental limitation of today's authentication systems is that they require users to authenticate themselves manually. 
 Instead, we invision a zero-login authentication system that is ultra secure yet requires no user input, using our proposed GaitKeeper system. 
