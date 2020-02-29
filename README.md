@@ -5,7 +5,7 @@
 
 # Inspiration
 A fundamental limitation of today's authentication systems is that they require users to authenticate themselves manually. 
-Instead, we invision a zero-login authentication system that is ultra secure yet requires no user input, using our proposed GaitKeeper system. 
+Instead, we envision a zero-login authentication system that is ultra secure yet requires no user input, using our proposed GaitKeeper system. 
 
 # What it does
 The GaitKeeper is an authentication service that provides a user trust score without user interaction.
